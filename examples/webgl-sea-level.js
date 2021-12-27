@@ -27,7 +27,6 @@ const elevation = [
 ];
 
 const layer = new TileLayer({
-  opacity: 0.6,
   source: new XYZ({
     url:
       'https://api.maptiler.com/tiles/terrain-rgb/{z}/{x}/{y}.png?key=' + key,
@@ -43,7 +42,7 @@ const layer = new TileLayer({
       'case',
       // use the `level` style variable to determine the color
       ['<=', elevation, ['var', 'level']],
-      [139, 212, 255, 1],
+      [139, 212, 255, 0.6],
       [139, 212, 255, 0],
     ],
   },
